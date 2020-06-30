@@ -106,6 +106,62 @@ void function6()
 	cout << s << "\n";
 }
 
+void function7()
+{
+	string first_name = "", friend_name = "", another_friend = "";
+	char friend_sex = 0;
+	int age = 0;
+	cout << "Please enter your firstname: ";
+	cin >> first_name;
+	cout << "Hello, " << first_name << endl;
+	cout << "Enter the name of the person you want to write to" << endl;
+	cin >> friend_name;
+
+	cout << "Enter the name of another friend" << endl;
+	cin >> another_friend;
+	cout << "What is the sex of your friend (m/ f)? " << endl;
+	cin >> friend_sex;
+	cout << "Enter the age of your friend:" << endl;
+	cin >> age;
+
+	cout << "Dear " << friend_name << endl;
+	cout << "How are you? \n I am fine. I miss you." << endl;
+	cout << "Have you seen " << another_friend << " lately?" << endl;
+	if(friend_sex == 'm')
+	{
+		cout << "If you see " << another_friend << " please ask him to call me." << endl;
+	}
+	else if(friend_sex == 'f')
+	{
+		cout << "If you see " << another_friend << " please ask her to call me." << endl;
+	}
+
+	if(age <= 0 || age >= 110)
+	{
+		cout << "you're kidding!";
+	}
+	else
+	{
+		cout << "I hear you just had a birthday and you are " << age << " years old.";
+	}
+
+	if(age <= 12)
+	{
+		cout << "Next year you will be " << age+1;
+	}
+	else if(age == 17)
+	{
+		cout << "Next year you will be able to vote";
+	}
+	else if(age >= 70)
+	{
+		cout << "I hope you are enjoying retirement.";
+	}
+	cout << "\n" << "Yours sincerely," << endl << endl;
+	cout << first_name;
+
+}
+
 int main()
 {
     //function1();
@@ -113,9 +169,8 @@ int main()
     //function4();
 	//repeatedSeqWords();
 	//repeatedSeqWordsnNum();
-	function6();
+	function7();
 
 	while(1);
 	return 0;
 }
-
